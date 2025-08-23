@@ -19,6 +19,7 @@
 
         <!-- Início Formulário -->
         <form id="formulario">
+            <!--Etapa 1-->
             <div class="step active">
                 <div class="pergunta">
                     <label for="idade">1. Qual a sua idade?</label>
@@ -54,6 +55,7 @@
                 </div>
             </div>
 
+            <!--Etapa 2-->
             <div class="step">
                 <div class="pergunta">
                     <label for="formacao">4. Qual a sua formação?</label>
@@ -124,6 +126,7 @@
                 </div>
             </div>
 
+            <!--Etapa 3-->
             <div class="step">
                 <div class="pergunta">
                     <label for="linguagem">7. Qual sua linguagem de programação favorita?</label>
@@ -141,6 +144,12 @@
                 </div>
             </div>
         </form>
+
+        <!-- Resultado -->
+        <div id="resultado" class="resultado" style="display:none;">
+            <h3>Recomendação de Cargo</h3>
+            <p id="mensagem"></p>
+        </div>
 
         <!--Botões-->
         <div class="botoes">
