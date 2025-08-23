@@ -1,12 +1,154 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Recomendador de Cargo</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <div class="container">
+        <h2>Formulário - Recomendador de Cargo</h2>
+        
+        <!-- Indicador de etapas -->
+        <div class="step-indicators">
+            <span class="step-circle active">1</span>
+            <span class="step-circle">2</span>
+            <span class="step-circle">3</span>  
+        </div>
+
+        <!-- Início Formulário -->
+        <form id="formulario">
+            <div class="step active">
+                <div class="pergunta">
+                    <label for="idade">1. Qual a sua idade?</label>
+                    <input type="number" step="0.1" id="idade" name="idade" min="0">
+                </div>
+
+                <div class="pergunta">
+                    <label for="tempo_experiencia_dados">2. Quanto tempo de experiência você tem na área de dados?</label>
+                    <select id="tempo_experiencia_dados" name="tempo_experiencia_dados">
+                        <option value="">Selecione...</option>
+                        <option value="sem_experiencia">Não tenho experiência</option>
+                        <option value="menos_1">Menos de 1 ano</option>
+                        <option value="1_2anos">De 1 a 2 anos</option>
+                        <option value="3_4anos">De 3 a 4 anos</option>
+                        <option value="4_6anos">De 4 a 6 anos</option>
+                        <option value="7_10anos">De 7 a 10 anos</option>
+                        <option value="mais_10">Mais de 10 anos</option>
+                    </select>
+                </div>
+
+                <div class="pergunta">
+                    <label for="nivel_ensino">3. Qual seu nível de ensino?</label>
+                    <select id="nivel_ensino" name="nivel_ensino">
+                        <option value="">Selecione...</option>
+                        <option value="nao_informar">Prefiro não informar</option>
+                        <option value="sem_graduacao">Não tenho graduação formal</option>
+                        <option value="estuduante_graduacao">Estudante de graduação</option>
+                        <option value="graduacao_bacharelado">Graduação/Bacharelado</option>
+                        <option value="pos_graduacao">Pós-graduação</option>
+                        <option value="mestrado">Mestrado</option>
+                        <option value="doutorado_phd">Doutorado/PhD</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="pergunta">
+                    <label for="formacao">4. Qual a sua formação?</label>
+                    <select id="formacao" name="formacao">
+                        <option value="">Selecione...</option>
+                        <option value="data_analyst">Analista de Dados/Data Analyst</option>
+                        <option value="data_scientist">Cientista de Dados/Data Scientist</option>
+                        <option value="data_engineer">Engenheiro de Dados/Arquiteto de Dados/Data Engineer/Data Architect</option>
+                        <option value="bi_analyst">Analista de BI/BI Analyst</option>
+                        <option value="business_analyst">Analista de Negócios/Business Analyst</option>
+                        <option value="desenvolvedor">Desenvolvedor/Engenheiro de Software/Analista de Sistemas</option>
+                        <option value="analista">Analista de Suporte/Analista Técnico</option>
+                        <option value="analytics_engineer">Analytics Engineer</option>
+                        <option value="ml_engineer">Engenheiro de Machine Learning/ML Engineer</option>
+                        <option value="product_manager">Product Manager/Product Owner (PM/APM/DPM/GPM/PO)</option>
+                        <option value="market_intelligence">Analista de Inteligência de Mercado/Market Intelligence</option>
+                        <option value="professor">Professor</option>
+                        <option value="estatistico">Estatístico</option>
+                        <option value="analista_marketing">Analista de Marketing</option>
+                        <option value="economista">Economista</option>
+                        <option value="dba">DBA/Administrador de Banco de Dados</option>
+                        <option value="outras_engenharias">Outras Engenharias (não inclui dev)</option>
+                        <option value="outra_opcao">Outra Opção</option>
+                    </select>
+                </div>
+
+                <div class="pergunta">
+                    <label for="pcd">5. Você é PcD (Pessoa com Deficiência)?</label>
+                    <select id="pcd" name="pcd">
+                        <option value="">Selecione...</option>
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                </div>
+
+                <div class="pergunta">
+                    <label for="pcd">6. Qual seu estado de moradia?</label>
+                    <select id="estado" name="estado">
+                    <option value="">Selecione...</option>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+                    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+                    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="step">
+                <div class="pergunta">
+                    <label for="linguagem">7. Qual sua linguagem de programação favorita?</label>
+                    <input type="text" id="linguagem" name="linguagem">
+                </div>
+
+                <div class="pergunta">
+                    <label for="bd">8. Qual(is) banco(s) de dados você utiliza?</label>
+                    <input type="text" id="bd" name="bd">
+                </div>
+
+                <div class="pergunta">
+                    <label for="cloud">9. Qual(is) ferramentas(s) de Cloud Computing você utiliza?</label>
+                    <input type="text" id="cloud" name="cloud">
+                </div>
+            </div>
+        </form>
+
+        <!--Botões-->
+        <div class="botoes">
+            <button type="button" id="anterior" disabled>Anterior</button>
+            <button type="button" id="proximo">Próximo</button>
+            <button type="submit" id="enviar" style="display:none;">Enviar</button>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
